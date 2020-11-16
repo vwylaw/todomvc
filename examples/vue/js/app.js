@@ -75,7 +75,8 @@
 				if (!value) {
 					return;
 				}
-				this.todos.push({ title: value, completed: false });
+				// TODO: Use a proper UUID instead of `Date.now()`.
+				this.todos.push({ id: Date.now(), title: value, completed: false });
 				this.newTodo = '';
 			},
 
